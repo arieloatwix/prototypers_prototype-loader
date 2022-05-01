@@ -11,11 +11,11 @@ body.loading {
 body.loading:after {
   content: "";
   border: 5px solid #373737;
-  border-radius: 100px;
+  border-radius: 200px;
   position: absolute;
   height: 60px;
   width: 60px;
-  transform: translate(0px, 8px) rotate(35deg);
+  transform: translate(0px, 8px) rotate(45deg);
   z-index: -1;
   animation: circle 1s linear infinite alternate;
 }
@@ -33,14 +33,15 @@ body.loading *:not(.loader) {
   margin: 10px auto;
   position: relative;
   border-radius: 50%;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.074);
   background-color: #41c9d6;
   background-image: radial-gradient(black 0%, black 35%, #41c9d6 36%),
     linear-gradient(#41c9d6 10px, transparent 0);
   background-size: 28px 28px;
-  background-position: center 15px, center 2px;
+  background-position: center 12px, center 2px;
   background-repeat: no-repeat;
   box-sizing: border-box;
-  animation: animloaderBack 500ms linear infinite alternate;
+  animation: animloaderBack 1000ms linear infinite alternate;
 }
 .loader:before {
   border-bottom: 15px solid red;
@@ -53,11 +54,11 @@ body.loading *:not(.loader) {
   left: 50%;
   display: flex;
   transform: translateX(-50%) translateZ(-1px);
-  width: 60px;
+  width: 50px;
   height: 30px;
   border-radius: 12px 12px 15px 15px;
   box-shadow: 64px 30px #8febf0 inset;
-  top: 32px;
+  top: 30px;
   border-bottom: 14px solid rgb(0, 0, 0, 0);
   display: block;
 }
@@ -107,7 +108,7 @@ body.loading *:not(.loader) {
   }
   100% {
     box-shadow: 0px 0px 2px 1px rgba(255, 255, 255, 0.279);
-    width: 20px;
+    width: 15px;
     height: 48px;
     background-position: -40px -36px;
     background-size: 80px 80px;
@@ -116,10 +117,10 @@ body.loading *:not(.loader) {
 
 @keyframes circle {
   0% {
-    border-color: rgb(74, 74, 74);
+    border-color: rgb(72, 72, 72);
   }
   100% {
-    border-color: rgb(117, 117, 117);
+    border-color: rgb(165, 165, 165);
   }
 }
 body.loaded {
