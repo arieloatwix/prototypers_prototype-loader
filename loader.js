@@ -4,9 +4,11 @@ const onPrototypeReady = () => {
   body.insertAdjacentHTML("afterbegin", ` <span class="loader"></span>`);
 
   window.addEventListener("load", function (event) {
-    body.classList.remove("loading");
-    document.querySelector(".loader")?.remove();
-    body.classList.add("loaded");
+    setTimeout(() => {
+      body.classList.remove("loading");
+      document.querySelector(".loader")?.remove();
+      body.classList.add("loaded");
+    }, 500);
   });
 };
 onPrototypeReady();
