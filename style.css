@@ -6,6 +6,7 @@ body.loading {
   height: 100vh;
   transform: rotate(45deg);
   display: flex !important;
+  overflow: hidden;
 }
 body.loading:after {
   content: "";
